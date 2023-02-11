@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #all{
+            background-color: rgb(220, 220, 220);
+        }
+        .icon{
+            margin: 0 auto;
+            width: 30px;
+            height: 30px;
+            border-radius: 100%;
+            border: 1px solid rgb(21, 37, 71);
+        }
+        img{
+            width: 30px;
+            height: 30px;
+            padding: 0.3px;
+            margin: 0 auto;
+        }
+       .email  {
+        text-align: center;
+       }
+       #email{
+        border-radius: 2px;
+        border: 1px solid rgb(234, 227, 227);
+       }
+       #button{
+         border: 2px;
+         margin: 4px;
+         background-color: rgb(62, 172, 194);
+         color: aliceblue;
+         border-radius: 2px;
+         
+       }
+       #button:hover{
+        opacity: 0.6;
+        cursor: pointer;
+       }
+    </style>
+</head>
+<body>
+    <form action="" id="all">
+        <br>
+        <br>
+    <div class="icon">
+        <img src="icon_email.png" alt="">
+    </div>
+    <h1 style="text-align: center;">
+        Get the invite
+    </h1>
+
+    <p style="text-align: center;">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam viverra orci ut
+    </p>
+<div class="email">
+    <input type="text" id="email" name="text/javascript" placeholder="Enter Email" >
+    <br><button id="button" onclick="check()" >REQUEST INVITE</button>
+    <br>
+    <br>
+</form>
+<script type="text/javascript">
+
+    function check(){
+        var lt=document.getElementById('email').value;
+        var atposition = lt.indexOf("@");
+        var dotposition = lt.lastIndexOf(".");
+        if(atposition < 1 || dotposition < (atposition + 2)
+                || (dotposition + 2) >= lt.length){
+            alert('Email không hợp lệ !');
+        }
+        else {
+            alert('Nhập email thành công')
+        }
+    }
+</script>
+</div>
+</body>
+</html>
